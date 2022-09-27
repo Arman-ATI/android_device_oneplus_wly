@@ -12,7 +12,7 @@ BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true
 DEVICE_PATH := device/oneplus/wly
 
 # Display
-TARGET_SCREEN_DENSITY := 450
+TARGET_SCREEN_DENSITY := 420
 $(call soong_config_set,qtidisplay,oplus_udfps,true)
 
 # DTB/O
