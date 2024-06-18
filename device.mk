@@ -70,6 +70,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     KeyHandlerResTarget \
     OPlusFrameworksResTarget \
+    OPlus10PROWifiOverlay \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget
