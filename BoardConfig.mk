@@ -7,10 +7,18 @@
 # Include the common OEM chipset BoardConfig.
 include device/oneplus/sm8450-common/BoardConfigCommon.mk
 
+BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true
+
 DEVICE_PATH := device/oneplus/wly
 
 # Display
 TARGET_SCREEN_DENSITY := 450
+
+# DTB/O
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+TARGET_KERNEL_CONFIG += vendor/oplus/wly.config
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
