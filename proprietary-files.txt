@@ -1339,7 +1339,13 @@ odm/etc/sensor/config/waipio_qrd_sx933x_down_0.json
 odm/etc/sensor/sensor_config.json
 
 # WiFi
+odm/etc/wifi/bdwlan.b0a
+odm/etc/wifi/bdwlan.b0c
+odm/etc/wifi/bdwlan.b0e
 odm/etc/wifi/bdwlan.elf
+odm/etc/wifi/bdwlang.b0a
+odm/etc/wifi/bdwlang.b0c
+odm/etc/wifi/bdwlang.b0e
 odm/etc/wifi/bdwlang.elf
 odm/etc/wifi/bin_version
 odm/etc/wifi/cnss_diag.conf
