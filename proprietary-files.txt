@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 10 Pro 5G (NE2213_15.0.0.700(EX01)).
+## are from OnePlus 10 Pro 5G (NE2213_14.0.0.920(EX01)).
 
 # ACDB
 odm/etc/acdbdata/FTM/acdb_cal.acdb
@@ -1036,6 +1036,8 @@ odm/lib64/libsharebuffer_impl.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_dsp_domains_v3.so
 odm/lib64/libsnpe_loader.so
+odm/lib64/libstblur_api.so
+odm/lib64/libstblur_capture_api.so
 odm/lib64/libstdc++.so
 odm/lib64/libstface_fd_api.so
 odm/lib64/libstfd_mobile_api.so
