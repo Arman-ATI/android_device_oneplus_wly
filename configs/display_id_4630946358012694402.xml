@@ -1,21 +1,52 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <displayConfiguration>
-    <!-- root node for HBM-->
+    <densityMapping>
+        <density>
+            <height>1080</height>
+            <width>2412</width>
+            <density>420</density>
+        </density>
+        <density>
+            <height>1440</height>
+            <width>3216</width>
+            <density>600</density>
+        </density>
+    </densityMapping>
+    <screenBrightnessMap interpolation="linear">
+        <point>
+            <value>0.00097680097</value>
+            <nits>2.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>800.0</nits>
+        </point>
+    </screenBrightnessMap>
     <highBrightnessMode enabled="true">
-        <!-- Transition point brightness from normal to HBM mode -->
-        <transitionPoint>0.4998779</transitionPoint>
-        <!-- Minimum lux to enter HBM -->
-        <minimumLux>6001</minimumLux>
-        <!-- Time limitation for HBM-->
+        <transitionPoint>0.50036665851</transitionPoint>
+        <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
+        <minimumLux>8700</minimumLux>
         <timing>
-            <timeWindowSecs>0</timeWindowSecs>
-            <timeMaxSecs>0</timeMaxSecs>
-            <timeMinSecs>0</timeMinSecs>
+            <timeWindowSecs>1800</timeWindowSecs>
+            <timeMaxSecs>300</timeMaxSecs>
+            <timeMinSecs>60</timeMinSecs>
         </timing>
-        <!-- Thermal limitation for HBM -->
-        <thermalStatusLimit>critical</thermalStatusLimit>
-        <!-- Low power mode limitation for HBM -->
-        <allowInLowPowerMode>true</allowInLowPowerMode>
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>2.000</sdrNits>
+                <hdrRatio>8.000</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>500.000</sdrNits>
+                <hdrRatio>1.5</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
     </highBrightnessMode>
+    <screenBrightnessRampFastDecrease>0.06</screenBrightnessRampFastDecrease>
+    <screenBrightnessRampFastIncrease>0.06</screenBrightnessRampFastIncrease>
+    <screenBrightnessRampSlowDecrease>0.04</screenBrightnessRampSlowDecrease>
+    <screenBrightnessRampSlowIncrease>0.04</screenBrightnessRampSlowIncrease>
+    <screenBrightnessRampIncreaseMaxMillis>3000</screenBrightnessRampIncreaseMaxMillis>
+    <screenBrightnessRampDecreaseMaxMillis>3000</screenBrightnessRampDecreaseMaxMillis>
 </displayConfiguration>
+

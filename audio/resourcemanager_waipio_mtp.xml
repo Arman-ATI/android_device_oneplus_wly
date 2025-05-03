@@ -40,24 +40,25 @@
         <param key="context_manager_enable" value ="false" />
         <param key="lpi_logging_enable" value ="false" />
         <param key="upd_dedicated_be" value ="true" />
+        <param key="signal_handler" value ="true" />
         <!-- YeWenliang@MULTIMEDIA.AUDIODRIVER, 2021/08/12, Add for mulit scene record -->
         <param key="oplus_multi_record" value="true"/>
         <!-- YeWenliang@MULTIMEDIA.AUDIODRIVER, 2021/08/12, Add for AP LVACFS -->
         <param key="record_use_ap_lvacfs" value="enable"/>
         <!-- YeWenliang@MULTIMEDIA.AUDIODRIVER, 2021/08/27, Add for smartpa power monitor -->
         <param key="support_smartpa_pm" value="true"/>
-        <!-- Zhao.Pan@MULTIMEDIA.AUDIODRIVER.FEEDBACK, 2022/04/12, add for speaker err feedback -->
-        <param key="oplus_check_speaker" value="true"/>
-        <!-- value: R0_MIN, R0_MAX, F0_MIN -->
-        <param key="oplus_speaker_threshold_l" value="5000,8000,450"/>
-        <param key="oplus_speaker_threshold_r" value="5000,8000,650"/>
-
+        <!-- Zhao.Pan@MULTIMEDIA.AUDIODRIVER.FEEDBACK, 2022/04/12, add for lvvefq err feedback -->
+        <param key="oplus_lvve_err_fb" value="true"/>
         <!-- YeWenliang@MULTIMEDIA.AUDIODRIVER, 2021/08/31, Add for ear protection -->
         <param key="oplus_ear_protection_enable" value="true"/>
-        <!-- YeWenliang@MULTIMEDIA.AUDIODRIVER, 2021/10/21, Add for power analysis -->
-        <param key="power_analysis_enable" value="true"/>
         <!-- ZhaoShengtao@MULTIMEDIA.AUDIODRIVER, 2021/10/28, Add for audio abnormal detect -->
-        <param key="audio_detect_config_enable" value="true"/>
+        <param key="audio_detect_config_enable" value="false"/>
+        <!-- Jianfeng.Qiu@MULTIMEDIA.AUDIODRIVER, 2021/12/21, Add for game voice -->
+        <param key="gvoice_adsp_support_mode" value="0011"/>
+        <!-- liuhaituo@MULTIMEDIA.AUDIODRIVER, 2022/04/16, Add adsp ssr interfac start -->
+        <param key="adsp_ssr_support" value="yes"/>
+        <!-- zhangrun@MULTIMEDIA.AUDIODRIVER, 2023/02/22, add for support call record in ocar mode -->
+        <param key="ocar_mode_support" value="true"/>
     </config_params>
     <config_volume>
         <use_volume_set_param>1</use_volume_set_param>
@@ -65,8 +66,16 @@
             <supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</supported_stream>
             <supported_stream>PAL_STREAM_COMPRESSED</supported_stream>
             <supported_stream>PAL_STREAM_PCM_OFFLOAD</supported_stream>
+            <supported_stream>PAL_STREAM_VOIP_RX</supported_stream>
         </supported_streams>
     </config_volume>
+    <config_lpm>
+        <use_disable_lpm>1</use_disable_lpm>
+        <lpm_supported_streams>
+            <lpm_supported_stream>PAL_STREAM_LOW_LATENCY</lpm_supported_stream>
+            <lpm_supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</lpm_supported_stream>
+        </lpm_supported_streams>
+    </config_lpm>
     <config_gapless key="gapless_supported" value="1"/>
     <bt_codecs>
         <codec codec_format="CODEC_TYPE_AAC" codec_type="enc|dec" codec_library="lib_bt_bundle.so" />
@@ -146,6 +155,10 @@
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
                 <snd_device_name>dmic-endfire</snd_device_name>
+                <custom-config key="HAC">
+                    <channels>2</channels>
+                    <snd_device_name>voice-dmic-ef-hac</snd_device_name>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -160,6 +173,10 @@
                 <custom-config key="quad-mic">
                     <channels>4</channels>
                     <snd_device_name>quad-mic</snd_device_name>
+                </custom-config>
+                <custom-config key="HAC">
+                    <channels>2</channels>
+                    <snd_device_name>voice-dmic-ef-hac</snd_device_name>
                 </custom-config>
             </usecase>
             <usecase>
@@ -182,6 +199,10 @@
                 <custom-config key="unprocessed-hdr-mic-inverted-portrait">
                     <channels>4</channels>
                     <snd_device_name>unprocessed-hdr-mic-inverted-portrait</snd_device_name>
+                </custom-config>
+                <custom-config key="qva-record">
+                    <channels>1</channels>
+                    <snd_device_name>qva-rec-mic</snd_device_name>
                 </custom-config>
             </usecase>
             <ec_rx_device>
@@ -527,12 +548,12 @@
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>2</priority>
                 <channels>2</channels>
-                <snd_device_name>voice-speaker-stereo</snd_device_name>
+                <snd_device_name>speaker</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_RX</name>
                 <priority>3</priority>
-                <snd_device_name>voice-speaker-stereo</snd_device_name>
+                <snd_device_name>speaker</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_ULTRASOUND</name>
@@ -565,12 +586,18 @@
           <usecase>
               <name>PAL_STREAM_VOICE_CALL</name>
               <priority>2</priority>
-              <snd_device_name>voice-handset</snd_device_name>
+              <snd_device_name>handset</snd_device_name>
+              <custom-config key="HAC">
+                  <snd_device_name>handset</snd_device_name>
+              </custom-config>
           </usecase>
           <usecase>
               <name>PAL_STREAM_VOIP_RX</name>
               <priority>3</priority>
-              <snd_device_name>voice-handset</snd_device_name>
+              <snd_device_name>handset</snd_device_name>
+              <custom-config key="HAC">
+                  <snd_device_name>handset</snd_device_name>
+              </custom-config>
           </usecase>
           <usecase>
               <name>PAL_STREAM_ULTRASOUND</name>
@@ -1152,6 +1179,12 @@
                 <param snd_name="va-mic-dmic" />
                 <param ec_ref="true" />
             </capture_profile>
+            <capture_profile name="DUAL_MIC_16KHZ_16BIT_AIS_ECNS">
+                <param sample_rate="16000" />
+                <param channels="2" />
+                <param bit_width="16" />
+                <param snd_name="va-mic-dmic" />
+            </capture_profile>
             <capture_profile name="TRI_MIC_16KHZ_16BIT_FFECNS">
                 <param sample_rate="16000" />
                 <param channels="3" />
@@ -1164,13 +1197,6 @@
                 <param channels="4" />
                 <param bit_width="16" />
                 <param snd_name="va-mic-qmic" />
-                <param ec_ref="true" />
-            </capture_profile>
-            <capture_profile name="DUAL_MIC_16KHZ_16BIT_AIS_ECNS">
-                <param sample_rate="16000" />
-                <param channels="2" />
-                <param bit_width="16" />
-                <param snd_name="va-mic-dmic" />
                 <param ec_ref="true" />
             </capture_profile>
         </capture_profile_list>
@@ -1189,14 +1215,14 @@
             <!-- Profile specific data which the algorithm can support -->
             <param sample_rate="16000" />
             <param bit_width="16" />
-            <param out_channels="2"/> <!-- Module output channels -->
-            <param capture_keyword="2000" />
-            <param client_capture_read_delay="2000" />
-            <param sva_transparent_enable="true" />
+            <param out_channels="1"/> <!-- Module output channels -->
+            <param capture_keyword="2000" /> <!-- Default history buffer length -->
+            <param client_capture_read_delay="2000" /> <!-- reserved buffer duration for rt data -->
+            <param pre_roll_duration="500" /> <!-- Default preroll duration -->
             <operating_modes>
-                <low_power capture_profile_handset="DUAL_MIC_16KHZ_16BIT_FFNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFNS"/>
-                <high_performance capture_profile_handset="DUAL_MIC_16KHZ_16BIT_AIS_ECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
-                <high_performance_and_charging capture_profile_handset="DUAL_MIC_16KHZ_16BIT_AIS_ECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
+                <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_FFNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFNS"/>
+                <high_performance capture_profile_handset="DUAL_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
+                <high_performance_and_charging capture_profile_handset="DUAL_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
             </operating_modes>
             <arm_ss_usecase>
                 <!-- Options are "KEYWORD_DETECTION", "USER_VERIFICATION", "CUSTOM_DETECTION"  -->
@@ -1256,7 +1282,7 @@
             <param client_capture_read_delay="2000" />
             <operating_modes>
                 <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_LPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_LPI"/>
-                <high_performance capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
+                <high_performance capture_profile_handset="DUAL_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
                 <high_performance_and_charging capture_profile_handset="DUAL_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
             </operating_modes>
             <module_params>
