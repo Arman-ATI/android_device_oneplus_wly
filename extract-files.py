@@ -47,7 +47,7 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle64_close')
         .clear_symbol_version('remote_handle64_invoke')
         .clear_symbol_version('remote_handle64_open'),
-    ('odm/lib64/libarcsoft_dual_sat.so', 'odm/lib64/libarcsoft_high_dynamic_range_v4.so', 'odm/lib64/libarcsoft_long_exposure_capture.so', 'odm/lib64/libarcsoft_long_exposure_preview.so', 'odm/lib64/libarcsoft_triple_sat.so', 'odm/lib64/libarcsoft_triple_zoomtranslator.so'): blob_fixup()
+    ('odm/lib64/libarcsoft_high_dynamic_range_v4.so', 'odm/lib64/libarcsoft_long_exposure_capture.so', 'odm/lib64/libarcsoft_long_exposure_preview.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
         .clear_symbol_version('remote_handle_open')
