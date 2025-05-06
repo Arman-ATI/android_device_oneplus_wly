@@ -12,30 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/wly/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/sun/config/common_full_phone.mk)
 
-# Rising
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Snapdragon 8 Gen 1" \
-    RisingMaintainer="Arman ATI"
-
-# Blur
-TARGET_ENABLE_BLUR := true
-
-# UDFPS
-TARGET_HAS_UDFPS := true
-
-# Camera
-PRODUCT_NO_CAMERA := true
-
-# Gapps
-WITH_GMS := false
-
-# ADB root
-ALLOW_ADBD_ROOT := true
-ALLOW_LOCAL_PROP_OVERRIDE := true
-
-PRODUCT_NAME := lineage_wly
+PRODUCT_NAME := sun_wly
 PRODUCT_DEVICE := wly
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -47,8 +26,6 @@ PRODUCT_SYSTEM_DEVICE := OP516FL1
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="NE2213-user 14 UKQ1.230924.001 S.19ed398-1-530c2 release-keys" \
-    BuildFingerprint=OnePlus/NE2213/OP516FL1:14/UKQ1.230924.001/S.19ed398-1-530c2:user/release-keys \
     DeviceName=OP516FL1 \
     DeviceProduct=NE2213 \
     SystemDevice=OP516FL1 \
