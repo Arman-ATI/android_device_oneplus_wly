@@ -71,29 +71,42 @@ def blob_fixup_nop_call(
 
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service': blob_fixup()
-        .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so')
-        .replace_needed('android.hardware.biometrics.face-V1-ndk_platform.so', 'android.hardware.biometrics.face-V1-ndk.so'),
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service': blob_fixup()
         .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so')
         .replace_needed('android.hardware.biometrics.fingerprint-V1-ndk_platform.so', 'android.hardware.biometrics.fingerprint-V1-ndk.so'),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         .regex_replace('SystemCamera =  0;  0;  1;  1;  1', 'SystemCamera =  0;  0;  0;  0;  1'),
-    ('odm/lib/liblvimfs_wrapper.so', 'odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libSuperRaw.so', 'odm/lib64/libPerfectColor.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so', 'odm/lib64/libyuv2.so'): blob_fixup()
+    ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libPerfectColor.so', 'odm/lib64/libSuperRaw.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so', 'odm/lib64/libyuv2.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     ('odm/lib64/libAlgoProcess.so', 'vendor/lib64/libcamximageformatutils.so'): blob_fixup()
         .replace_needed('android.hardware.graphics.common-V2-ndk_platform.so', 'android.hardware.graphics.common-V6-ndk.so')
         .replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V5-ndk.so'),
+    ('odm/lib64/libHIS.so', 'odm/lib64/libOGLManager.so'): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    ('odm/lib64/libaiboost_hexagon.so', 'odm/lib64/libarcsoft_high_dynamic_range_v4.so'): blob_fixup()
+        .clear_symbol_version('remote_handle_close')
+        .clear_symbol_version('remote_handle_invoke')
+        .clear_symbol_version('remote_handle_open')
+        .clear_symbol_version('remote_handle64_close')
+        .clear_symbol_version('remote_handle64_invoke')
+        .clear_symbol_version('remote_handle64_open')
+        .clear_symbol_version('remote_register_buf_attr')
+        .clear_symbol_version('remote_register_buf'),
+    ('odm/lib64/libarcsoft_dual_sat.so', 'odm/lib64/libarcsoft_dual_zoomtranslator.so', 'odm/lib64/libarcsoft_triple_sat.so', 'odm/lib64/libarcsoft_triple_zoomtranslator.so'): blob_fixup()
+        .add_needed('libc++_shared.so'),
     'odm/lib64/libextensionlayer.so': blob_fixup()
         .replace_needed('libziparchive.so', 'libziparchive_odm.so'),
-    'vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face': blob_fixup()
-        .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so')
-        .replace_needed('android.hardware.biometrics.face-V1-ndk_platform.so', 'android.hardware.biometrics.face-V1-ndk.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
+    'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
+        .replace_needed('android.frameworks.stats-V1-ndk_platform.so', 'android.frameworks.stats-V1-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
@@ -102,7 +115,6 @@ module = ExtractUtilsModule(
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
-    add_firmware_proprietary_file=True,
 )
 
 if __name__ == '__main__':

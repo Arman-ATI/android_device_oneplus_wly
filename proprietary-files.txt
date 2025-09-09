@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 10 Pro 5G (NE2213_14.0.0.920(EX01)).
+## are from OnePlus 10 Pro 5G (NE2213_15.0.0.901(EX01)).
 
 # ACDB
 odm/etc/acdbdata/FTM/acdb_cal.acdb
@@ -74,8 +74,6 @@ odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID6_MIC_Fast.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID7_MIC_Interview.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID8_MIC_Unprocess.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID9_MIC_Voice.txt
-odm/lib64/lib_lvacfs.so
-odm/lib64/liblvacfs_wrapper.so
 
 # Camera
 odm/etc/camera/anc/fusion_model
@@ -165,6 +163,7 @@ odm/etc/camera/fb_model/211_pre.bin
 odm/etc/camera/fb_model/212.png
 odm/etc/camera/fb_model/212_pre.bin
 odm/etc/camera/fb_model/213.png
+odm/etc/camera/fb_model/AIdeblemishSnapMask.bin
 odm/etc/camera/fb_model/beauty_body.bin
 odm/etc/camera/fb_model/eyeBright.png
 odm/etc/camera/fb_model/eyesMask.png
@@ -507,6 +506,77 @@ odm/etc/camera/gesture/tt_hand_det_v11.0.model
 odm/etc/camera/gesture/tt_hand_gesture_v11.1.model
 odm/etc/camera/gesture/tt_hand_kp_v6.0.model
 odm/etc/camera/gesture/tt_hand_lr_v3.0.model
+odm/etc/camera/meishe_lut/ByYo3If
+odm/etc/camera/meishe_lut/Cold.cube.rgb.bin
+odm/etc/camera/meishe_lut/DL_A_MoneyBall.bin
+odm/etc/camera/meishe_lut/DL_B_Inception.bin
+odm/etc/camera/meishe_lut/DL_C_R3_80.bin
+odm/etc/camera/meishe_lut/DL_D_G4.cube.rgb.bin
+odm/etc/camera/meishe_lut/DL_L_B6.cube.rgb.bin
+odm/etc/camera/meishe_lut/Delta400.3dl.rgb.bin
+odm/etc/camera/meishe_lut/Emerald.cube.rgb.bin
+odm/etc/camera/meishe_lut/Martin.cube.rgb.bin
+odm/etc/camera/meishe_lut/OPLUSR0604.cube.rgb.bin
+odm/etc/camera/meishe_lut/Radiance.cube.rgb.bin
+odm/etc/camera/meishe_lut/Serenity.cube.rgb.bin
+odm/etc/camera/meishe_lut/Texture-70.cube.rgb.bin
+odm/etc/camera/meishe_lut/White.cube.rgb.bin
+odm/etc/camera/meishe_lut/black_gold.bin
+odm/etc/camera/meishe_lut/blackandwhite.cube.rgb.bin
+odm/etc/camera/meishe_lut/bright_coloured.bin
+odm/etc/camera/meishe_lut/cola.bin
+odm/etc/camera/meishe_lut/cyberpunk-kitsch-3.1.CUBE.rgb.bin
+odm/etc/camera/meishe_lut/drjw1994.bin
+odm/etc/camera/meishe_lut/drjw2010.bin
+odm/etc/camera/meishe_lut/fuji-cc-high.bin
+odm/etc/camera/meishe_lut/fuji-cc-low.bin
+odm/etc/camera/meishe_lut/fuji-eterna-v2.cube.rgb.bin
+odm/etc/camera/meishe_lut/fuji-nc.bin
+odm/etc/camera/meishe_lut/fuji-proNegHi.bin
+odm/etc/camera/meishe_lut/fuji.cube.rgb.bin
+odm/etc/camera/meishe_lut/fuji_cc.bin
+odm/etc/camera/meishe_lut/gourmet.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-24hour-city.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-3dcity.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-after-glow.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-azure-water.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-beach.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-blue-water.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-coco-grove.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-crisp-fall.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-desert.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-earth.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-glazed-tile.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-japan.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-lake.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-mountainous.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-old-times.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-quietly-ele.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-rosy.cube.rgb.bin
+odm/etc/camera/meishe_lut/gt-steaming.cube.rgb.bin
+odm/etc/camera/meishe_lut/interstellar_space.bin
+odm/etc/camera/meishe_lut/jw_sun.CUBE.rgb.bin
+odm/etc/camera/meishe_lut/jw_surprise.CUBE.rgb.bin
+odm/etc/camera/meishe_lut/kodak.cube.rgb.bin
+odm/etc/camera/meishe_lut/meicam.child.bin
+odm/etc/camera/meishe_lut/mono.cube.rgb.bin
+odm/etc/camera/meishe_lut/morandi.cube.rgb.bin
+odm/etc/camera/meishe_lut/natural.cube.rgb.bin
+odm/etc/camera/meishe_lut/neon-2020.cube.rgb.bin
+odm/etc/camera/meishe_lut/oplus-black-gold.cube.rgb.bin
+odm/etc/camera/meishe_lut/oplus-cyberpunk.cube.rgb.bin
+odm/etc/camera/meishe_lut/oplus-nightcity.cube.rgb.bin
+odm/etc/camera/meishe_lut/oplus-yellow-blue.cube.rgb.bin
+odm/etc/camera/meishe_lut/p4_1.cube.rgb.bin
+odm/etc/camera/meishe_lut/p4_3.cube.rgb.bin
+odm/etc/camera/meishe_lut/rJ5g5vPWG
+odm/etc/camera/meishe_lut/red-red.cube.rgb.bin
+odm/etc/camera/meishe_lut/sky-blue.cube.rgb.bin
+odm/etc/camera/meishe_lut/tone-of-light.cube.rgb.bin
+odm/etc/camera/meishe_lut/tree-green.cube.rgb.bin
+odm/etc/camera/meishe_lut/vivid-cool.cube.rgb.bin
+odm/etc/camera/meishe_lut/vivid-lut.cube.rgb.bin
+odm/etc/camera/meishe_lut/vivid-warm.cube.rgb.bin
 odm/etc/camera/micFilter/blue_pink_3.png
 odm/etc/camera/micFilter/curve_0.png
 odm/etc/camera/micFilter/green_orange_2.png
@@ -820,6 +890,7 @@ odm/etc/camera/tonemap/tonemap_lut_6
 odm/etc/camera/tonemap/tonemap_lut_7
 odm/etc/camera/tonemap/tonemap_lut_8
 odm/etc/camera/tonemap/tonemap_lut_9
+odm/etc/camera/AiFace.json
 odm/etc/camera/CameraHWConfiguration.config
 odm/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode
 odm/etc/camera/anc_cl_kernel.cache
@@ -848,10 +919,6 @@ odm/etc/camera/settings_fdc.txt
 odm/etc/camera/settings_fdc_lite.txt
 odm/etc/camera/wide.bin
 odm/etc/vintf/manifest/manifest_oplus_cameraextension_aidl.xml
-odm/lib64/aiboost/libQnnHtp.so
-odm/lib64/aiboost/libQnnHtpPrepare.so
-odm/lib64/aiboost/libQnnHtpV69Stub.so
-odm/lib64/aiboost/libQnnSystem.so
 odm/lib64/camera/components/com.oplus.node.pilot.so
 odm/lib64/camera/components/com.oplus.node.preview.so
 odm/lib64/camera/components/com.oplus.node.sstabdefer.so
@@ -877,6 +944,10 @@ odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/revision.txt
+
+
+
+
 odm/lib64/lib2DSlender.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
@@ -885,7 +956,7 @@ odm/lib64/libAncHumBokeh.so
 odm/lib64/libAncHumBokehPost.so
 odm/lib64/libAncHumVideoBase.so
 odm/lib64/libAncHumanDoubleExposure.so
-odm/lib64/libAncHumanRetain.so
+#odm/lib64/libAncHumanRetain.so
 odm/lib64/libAncHumanSegFigureFusion.so
 odm/lib64/libAncSegBaseSdk.so
 odm/lib64/libAncSegmentSdk.so
@@ -901,9 +972,9 @@ odm/lib64/libFaceBeautyPICap.so
 odm/lib64/libFaceBeautyPre.so
 odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFilterWrapper.so
-odm/lib64/libHIS.so;DISABLE_CHECKELF
+odm/lib64/libHIS.so
 odm/lib64/libImageWarpMask.so;FIX_SONAME
-odm/lib64/libOGLManager.so;DISABLE_CHECKELF
+odm/lib64/libOGLManager.so
 odm/lib64/libOPLUS_SCPortrait.so;FIX_SONAME
 odm/lib64/libPerfectColor.so
 odm/lib64/libPerfectlyClearCrux.so
@@ -911,7 +982,6 @@ odm/lib64/libPerfectlyClearCruxOpt.so
 odm/lib64/libPlatformValidatorShared.so
 odm/lib64/libPolarrRender.so
 odm/lib64/libPreviewDecisionOld.so
-odm/lib64/libQnnHtpAltPrepV69Stub.so
 odm/lib64/libRbsFlow_cap.so
 odm/lib64/libRedeyeReduce.so
 odm/lib64/libSNPE.so
@@ -936,10 +1006,15 @@ odm/lib64/libXDocProcessSDK.so
 odm/lib64/libYTCommon.so
 odm/lib64/lib_rectify.so
 odm/lib64/libaiboost.so
-odm/lib64/libaiboost_hexagon.so;DISABLE_CHECKELF
+odm/lib64/libaiboost_hexagon.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
 odm/lib64/libaiseg.so
+odm/lib64/aiboost/libQnnHtp.so
+odm/lib64/aiboost/libQnnHtpPrepare.so
+odm/lib64/aiboost/libQnnHtpV69Stub.so
+odm/lib64/aiboost/libQnnSystem.so
+odm/lib64/libQnnHtpAltPrepV69Stub.so
 odm/lib64/libalCFR.so
 odm/lib64/libalgoFisheye.so
 odm/lib64/libancbase_rt_bokeh.so
@@ -954,8 +1029,8 @@ odm/lib64/libapspng.so
 odm/lib64/libapsyuv.so
 odm/lib64/libarc_eis_custom.so
 odm/lib64/libarcsoft_distortion_correction.so
-odm/lib64/libarcsoft_dual_sat.so;DISABLE_CHECKELF
-odm/lib64/libarcsoft_dual_zoomtranslator.so;DISABLE_CHECKELF
+odm/lib64/libarcsoft_dual_sat.so
+odm/lib64/libarcsoft_dual_zoomtranslator.so
 odm/lib64/libarcsoft_dualcam_bokeh_api.so
 odm/lib64/libarcsoft_dualcam_refocus_left.so
 odm/lib64/libarcsoft_dualcam_refocus_preview.so
@@ -969,10 +1044,10 @@ odm/lib64/libarcsoft_hdrplus_hvx_stub.so
 odm/lib64/libarcsoft_high_dynamic_range.so
 odm/lib64/libarcsoft_high_dynamic_range_couple.so
 odm/lib64/libarcsoft_high_dynamic_range_couple_v4.so
-odm/lib64/libarcsoft_high_dynamic_range_v4.so;DISABLE_CHECKELF
+odm/lib64/libarcsoft_high_dynamic_range_v4.so
 odm/lib64/libarcsoft_lensstaindetection.so
-odm/lib64/libarcsoft_long_exposure_capture.so;DISABLE_CHECKELF
-odm/lib64/libarcsoft_long_exposure_preview.so;DISABLE_CHECKELF
+odm/lib64/libarcsoft_long_exposure_capture.so;FIX_SONAME
+odm/lib64/libarcsoft_long_exposure_preview.so;FIX_SONAME
 odm/lib64/libarcsoft_low_light_hdr.so
 odm/lib64/libarcsoft_low_light_hdr_for_neon.so;FIX_SONAME
 odm/lib64/libarcsoft_mcxmflpolicy.so
@@ -985,12 +1060,13 @@ odm/lib64/libarcsoft_scbokeh_video.so
 odm/lib64/libarcsoft_smart_denoise.so
 odm/lib64/libarcsoft_smart_denoise_v4.so
 odm/lib64/libarcsoft_super_night_raw.so
-odm/lib64/libarcsoft_triple_sat.so;DISABLE_CHECKELF
-odm/lib64/libarcsoft_triple_zoomtranslator.so;DISABLE_CHECKELF
+odm/lib64/libarcsoft_triple_sat.so
+odm/lib64/libarcsoft_triple_zoomtranslator.so
 odm/lib64/libarcsoft_turbo_fusion_raw_grf.so
 odm/lib64/libarcsoft_turbo_fusion_raw_portrait_super_night.so
 odm/lib64/libarcsoft_turbo_fusion_raw_super_night.so
 odm/lib64/libarcsoft_videoautozoom.so;FIX_SONAME
+odm/lib64/libextendfile.so
 odm/lib64/libcalculator.so
 odm/lib64/libcalculator_htp.so
 odm/lib64/libcreatebin.so
@@ -1004,7 +1080,6 @@ odm/lib64/libextensionlayer.so
 odm/lib64/libhwconfigurationutil.so
 odm/lib64/libhyperlapse.so
 odm/lib64/libmpbase.so
-odm/lib64/libop-ai-beauty-body-detection.so
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/liboplus-uah-client.so
 odm/lib64/liboptical_zoom_dc.so
@@ -1022,9 +1097,12 @@ odm/lib64/libsharebuffer_impl.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_dsp_domains_v3.so
 odm/lib64/libsnpe_loader.so
+
 #odm/lib64/libstblur_api.so
 #odm/lib64/libstblur_capture_api.so
+
 odm/lib64/libstface_fd_api.so
+odm/lib64/libstfaceunlockocl.so
 odm/lib64/libstfd_mobile_api.so
 odm/lib64/libthirdcapability.so
 odm/lib64/libtriplecam_optical_zoom_control.so
@@ -1215,9 +1293,6 @@ vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
-vendor/lib64/libqll.so
-vendor/lib64/libqll10.so
-vendor/lib64/libqllengine.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsynx.so
@@ -1264,27 +1339,6 @@ odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 odm/lib64/vendor.qti.esepowermanager@1.0.so
 odm/lib64/vendor.qti.esepowermanager@1.1.so
-
-# Face
-odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service
-odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
-odm/etc/vintf/manifest/manifest_oplus_face.xml
-vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face
-vendor/etc/init/android.hardware.biometrics.face@1.0-service.face.rc
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-odm/vendor/firmware/facereg.b00
-odm/vendor/firmware/facereg.b01
-odm/vendor/firmware/facereg.b02
-odm/vendor/firmware/facereg.b03
-odm/vendor/firmware/facereg.b04
-odm/vendor/firmware/facereg.b05
-odm/vendor/firmware/facereg.b06
-odm/vendor/firmware/facereg.b07
-odm/vendor/firmware/facereg.mdt
-odm/lib64/libstfaceunlockocl.so
 
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
@@ -1354,6 +1408,8 @@ odm/etc/sensor/config/waipio_qrd_icm4x6xx.json
 odm/etc/sensor/config/waipio_qrd_lps22hb.json
 odm/etc/sensor/config/waipio_qrd_lsm6dso_0.json
 odm/etc/sensor/config/waipio_qrd_mmc56x3x.json
+odm/etc/sensor/config/waipio_qrd_oplus_flight_detect.json
+odm/etc/sensor/config/waipio_qrd_pocket.json
 odm/etc/sensor/config/waipio_qrd_sx933x_0.json
 odm/etc/sensor/config/waipio_qrd_sx933x_down_0.json
 odm/etc/sensor/sensor_config.json
@@ -1374,5 +1430,3 @@ odm/etc/wifi/regdb.bin
 odm/etc/wifi/regdb_version
 odm/etc/wifi/sar-vendor-cmd.xml
 odm/etc/wifi/wifisar.cfg
-odm/etc/wifi.cfg
-odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini

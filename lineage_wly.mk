@@ -19,6 +19,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 8 Gen 1" \
     RisingMaintainer="Arman ATI"
 
+RISING_MAINTAINER := Arman ATI
+
 # Blur
 TARGET_ENABLE_BLUR := true
 
@@ -29,7 +31,7 @@ TARGET_HAS_UDFPS := true
 PRODUCT_NO_CAMERA := true
 
 # Gapps
-WITH_GMS := false
+WITH_GMS := true
 
 # ADB root
 ALLOW_ADBD_ROOT := true

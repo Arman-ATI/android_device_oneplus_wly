@@ -39,6 +39,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_id_4630946358012694402.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946358012694402.xml
 
+# Lineage Health
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
+
 # Face
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.biometrics.face.xml
@@ -73,7 +76,7 @@ PRODUCT_PACKAGES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.oplus
+    vendor.lineage.powershare-service.oplus
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
