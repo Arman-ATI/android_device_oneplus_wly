@@ -19,6 +19,7 @@ TARGET_KERNEL_CONFIG += vendor/oplus/wly.config
 
 # Display
 TARGET_SCREEN_DENSITY := 420
+$(call soong_config_set,qtidisplay,oplus_udfps,true)
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
