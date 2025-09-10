@@ -1016,6 +1016,7 @@ odm/lib64/aiboost/libQnnHtpV69Stub.so
 odm/lib64/aiboost/libQnnSystem.so
 odm/lib64/libQnnHtpAltPrepV69Stub.so
 odm/lib64/libalCFR.so
+odm/lib64/libalog.so
 odm/lib64/libalgoFisheye.so
 odm/lib64/libancbase_rt_bokeh.so
 odm/lib64/libancbase_rt_fusion.so;FIX_SONAME
