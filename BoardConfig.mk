@@ -13,7 +13,7 @@ DEVICE_PATH := device/oneplus/wly
 
 # Display
 TARGET_SCREEN_DENSITY := 420
-$(call soong_config_set,qtidisplay,oplus_udfps,true)
+$(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
 # DTB/O
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
