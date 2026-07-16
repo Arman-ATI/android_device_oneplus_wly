@@ -1411,6 +1411,17 @@ odm/bin/hw/vendor.qti.secure_element@1.2-service
 odm/etc/init/vendor.qti.secure_element@1.2-service.rc
 odm/lib64/android.hardware.secure_element@1.0-impl.so
 
+# Face unlock firmware
+odm/vendor/firmware/facereg.b00
+odm/vendor/firmware/facereg.b01
+odm/vendor/firmware/facereg.b02
+odm/vendor/firmware/facereg.b03
+odm/vendor/firmware/facereg.b04
+odm/vendor/firmware/facereg.b05
+odm/vendor/firmware/facereg.b06
+odm/vendor/firmware/facereg.b07
+odm/vendor/firmware/facereg.mdt
+
 # Sensors
 odm/etc/sensor/config/waipio_qrd_ak0991x.json
 odm/etc/sensor/config/waipio_qrd_alsps.json
