@@ -1100,7 +1100,6 @@ odm/lib64/liboplus-uah-client.so
 odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
 odm/lib64/libormshalclient.so
-odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
 odm/lib64/libremosaic_wrapper.so
