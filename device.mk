@@ -74,6 +74,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
+    FaceUnlockWlyOverlay \
     OPlusFrameworksResTarget \
     OPlus10PROWifiOverlay \
     OPlusSettingsProviderResTarget \
