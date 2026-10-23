@@ -32,6 +32,9 @@ TARGET_SCREEN_HEIGHT := 2412
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.media.xml_variant.profiles=_vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
