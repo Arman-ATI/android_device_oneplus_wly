@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/wly
 # Display
 TARGET_SCREEN_DENSITY := 420
 
+# DTB / DTBO
+TARGET_MERGE_DTBOS_WILDCARD := wly-*
+
 # Biometrics (Face)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
