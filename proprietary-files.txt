@@ -49,7 +49,6 @@ odm/lib/rfsa/adsp/libvdsuperphoto_skel.so
 
 # Audio firmware
 odm/firmware/tfa98xx.cnt
-odm/lib64/libtfa98xx.so
 
 # Audio Libraries
 odm/lib64/lib_lvacfs.so
@@ -82,6 +81,14 @@ odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID6_MIC_Fast.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID7_MIC_Interview.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID8_MIC_Unprocess.txt
 odm/etc/lvacfs_params/2mic/LVACFS_Parameter_ID9_MIC_Voice.txt
+
+# Camera compatibility
+system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
+vendor/lib64/libcv_common.so:vendor/lib64/libcv_common_waipio.so;FIX_SONAME
+vendor/lib64/libcvp2_1.so
+vendor/lib64/libeva.so:vendor/lib64/libeva_waipio.so;FIX_SONAME
+vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapi_waipio.so;FIX_SONAME
+vendor/lib64/libsynx.so:vendor/lib64/libsynx_waipio.so;FIX_SONAME
 
 # Camera
 odm/etc/camera/anc/fusion_model
@@ -1016,7 +1023,6 @@ odm/lib64/libWaterMode.so
 odm/lib64/libXDocProcessSDK.so
 odm/lib64/libYTCommon.so
 odm/lib64/lib_rectify.so
-odm/lib64/libaiboost.so
 odm/lib64/libaiboost_hexagon.so
 odm/lib64/libaiboost_llm.so
 odm/lib64/libaisal.so
@@ -1308,12 +1314,12 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
-vendor/lib64/libos.so
+vendor/lib64/libqll.so
+vendor/lib64/libqll10.so
+vendor/lib64/libqllengine.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libsfeShiftExtrapolation.so
-vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
-vendor/lib64/libthreadutils.so
 vendor/lib64/libubifocus.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform.so
