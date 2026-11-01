@@ -71,6 +71,24 @@ def blob_fixup_nop_call(
 
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service': blob_fixup()
+        .add_needed('libbase_shim.so')
+        .clear_symbol_version('_ZN7android4base4TrimERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE')
+        .replace_needed('android.hardware.biometrics.face-V1-ndk_platform.so', 'android.hardware.biometrics.face-V1-ndk.so')
+        .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so'),
+    'odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.commondcs-V1-ndk_platform.so', 'vendor.oplus.hardware.commondcs-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.osense.client-V1-ndk_platform.so', 'vendor.oplus.hardware.osense.client-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.performance-V1-ndk_platform.so', 'vendor.oplus.hardware.performance-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform.so', 'vendor.oplus.hardware.sendextcamcmd-V2-ndk.so'),
+    'odm/lib64/libsecurity_event_dcs.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.commondcs-V1-ndk_platform.so', 'vendor.oplus.hardware.commondcs-V1-ndk.so'),
+    'odm/lib64/libolc_vnd.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.olc2-V1-ndk_platform.so', 'vendor.oplus.hardware.olc2-V1-ndk.so'),
+    'odm/lib64/vendor.oplus.hardware.cameraextension-V1-service-impl.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.osense.client-V1-ndk_platform.so', 'vendor.oplus.hardware.osense.client-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.performance-V1-ndk_platform.so', 'vendor.oplus.hardware.performance-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.cameraextension-V1-ndk_platform.so', 'vendor.oplus.hardware.cameraextension-V1-ndk.so'),
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service': blob_fixup()
         .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so')
         .replace_needed('android.hardware.biometrics.fingerprint-V1-ndk_platform.so', 'android.hardware.biometrics.fingerprint-V1-ndk.so'),

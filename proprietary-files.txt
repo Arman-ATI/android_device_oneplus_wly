@@ -1024,21 +1024,12 @@ odm/lib64/libXDocProcessSDK.so
 odm/lib64/libYTCommon.so
 odm/lib64/lib_rectify.so
 odm/lib64/libaiboost_hexagon.so
-odm/lib64/libaiboost_llm.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
 odm/lib64/libaiseg.so
-odm/lib64/aiboost/libQnnHtp.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnHtpV69Stub.so;MODULE_SUFFIX=.aiboost
-odm/lib64/aiboost/libQnnSystem.so;MODULE_SUFFIX=.aiboost
-odm/lib64/aiframe/libQnnHtp.so;MODULE_SUFFIX=.aiframe
-odm/lib64/aiframe/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiframe
 odm/lib64/aiframe/libQnnHtpV69Stub.so;MODULE_SUFFIX=.aiframe
-odm/lib64/aiframe/libQnnSystem.so;MODULE_SUFFIX=.aiframe
-odm/lib64/aiframe/libaiboost_qnn_external_delegate.so;FIX_SONAME
-odm/lib64/aiframe/libqcom_llm.so
-odm/lib64/aiframe/libtransformer_lite.so
 odm/lib64/libQnnHtpAltPrepV69Stub.so
 odm/lib64/libalCFR.so
 odm/lib64/libalgoFisheye.so
@@ -1113,7 +1104,6 @@ odm/lib64/libormshalclient.so
 odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
 odm/lib64/libremosaic_wrapper.so
-odm/lib64/librpmbengclient.so
 odm/lib64/libsaveshaderbin.so
 odm/lib64/libsecurity_event_dcs.so
 odm/lib64/libalogencrypt.so
@@ -1499,6 +1489,11 @@ odm/etc/irissoft_samsung_S6E3HC3_dsc_cmd_mode_panel.xml
 odm/etc/nfc/libnfc-mtp-SN100.conf_20847:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_20847:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_68:vendor/firmware/sn100u.bin
+
+# Secure element
+odm/bin/hw/vendor.qti.secure_element@1.2-service
+odm/etc/init/vendor.qti.secure_element@1.2-service.rc
+odm/lib64/android.hardware.secure_element@1.0-impl.so
 
 # Sensors
 odm/etc/sensor/config/waipio_qrd_ak0991x.json
