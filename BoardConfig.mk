@@ -9,6 +9,9 @@ include device/oneplus/sm8450-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/wly
 
+# Display
+TARGET_SCREEN_DENSITY := 450
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
@@ -16,8 +19,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
-TARGET_RECOVERY_DENSITY := xxhdpi
-TARGET_RECOVERY_UI_MARGIN_HEIGHT := 126
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
